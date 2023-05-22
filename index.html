@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .course-selection {
+      margin-bottom: 20px;
+    }
+    
+    .payment-area {
+      display: none;
+    }
+    
+    #paymentCheckbox:checked + .payment-area {
+      display: block;
+    }
+    
+    .payment-area label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+
+  <script>
+    function register() {
+      
+      window.location.href = "card_details.html"; }
+  </script>
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration</h2>
+    <form id="registrationForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      
+      <div class="course-selection">
+        <label for="course">Select a Course:</label>
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option value="course1">WEB-DEV</option>
+          <option value="course2">JAVA</option>
+          <option value="course3">PYTHON</option>
+        </select>
+      </div>
+      
+      <label for="paymentCheckbox">
+        <input type="checkbox" id="paymentCheckbox">
+        Proceed to Payment
+      </label>
+      
+      <div class="payment-area">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber">
+        
+        <label for="expirationDate">Expiration Date:</label>
+        <input type="text" id="expirationDate">
+        
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv">
+      </div>
+      
+    
+      <button onclick="register()">Register</button>
+    </form>
+  </div>
+</body>
+</html>
